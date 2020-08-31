@@ -23,7 +23,7 @@ namespace JWT.Simplify.controllers
     public class AutenticateController : Controller
     {
         private readonly UserService _service;
-        private static string Secret = "e2855505-79aa-438d-985c-2b6711923412";
+        public static string Secret = "e2855505-79aa-438d-985c-2b6711923412";
 
         public AutenticateController(UserService service, TokenConfig tokenConfig)
         {
