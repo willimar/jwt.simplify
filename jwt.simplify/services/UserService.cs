@@ -4,7 +4,6 @@ using crud.api.core.repositories;
 using crud.api.core.services;
 using jwt.simplify.entities;
 using JWT.Simplify.exceptions;
-using strings.utils.extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +19,11 @@ namespace jwt.simplify.services
 
         public IEnumerable<IHandleMessage> SaveData(User user, string password)
         {
-            var hashIdEmail = Criptography.GetHash(new string[] { user.Email, password });
-            var hashIdLogin = Criptography.GetHash(new string[] { user.Login, password });
+            var emailVal = new string[] { user.Email, password };
+            var loginVal = new string[] { user.Login, password };
+
+            var hashIdEmail = emailVal.ToHash();
+            var hashIdLogin = loginVal.ToHash();
 
             user.HashIdEmail = hashIdEmail;
             user.HashIdLogin = hashIdLogin;

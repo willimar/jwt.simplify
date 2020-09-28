@@ -7,7 +7,6 @@ using JWT.Simplify.models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using strings.utils.extensions;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -53,7 +52,8 @@ namespace JWT.Simplify.controllers
                     return StatusCode((int)HttpStatusCode.BadRequest, result);
                 }
 
-                var hashValue = Criptography.GetHash(new string[] { model.User, model.Password });
+                var value = new string[] { model.User, model.Password };
+                var hashValue = value.ToHash();
                 var user = this._service.GetData(u => u.HashIdEmail.Equals(hashValue) || u.HashIdLogin.Equals(hashValue)).FirstOrDefault();
 
                 if (user is null)
