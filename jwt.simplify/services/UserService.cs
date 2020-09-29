@@ -4,6 +4,7 @@ using crud.api.core.repositories;
 using crud.api.core.services;
 using jwt.simplify.entities;
 using JWT.Simplify.exceptions;
+using JWT.Simplify.services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,21 @@ namespace jwt.simplify.services
             }
 
             return base.SaveData(user);
+        }
+
+        public IHandleMessage Login(string user, string password)
+        {
+            var userHash = (new string[] { user, password }).ToHash();
+            var userData = this.GetData(e => e.HashIdEmail.Equals(userHash) || e.HashIdLogin.Equals(userHash)).FirstOrDefault();
+
+            if (userData == null)
+            {
+                return new HandleMessage(nameof(LoginFoundException), "Invalid login or password.", HandlesCode.ValueNotFound);
+            }
+
+            var token = TokenService.GenerateToken(userData);
+
+            return new HandleMessage("Token", token, HandlesCode.Accepted);
         }
     }
 }
