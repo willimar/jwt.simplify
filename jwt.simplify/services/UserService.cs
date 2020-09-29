@@ -39,27 +39,12 @@ namespace jwt.simplify.services
                  */
                 if (this.GetData(e => e.Email.ToLower().Equals(user.Email.ToLower())).Any())
                 {
-                    result.Add(new HandleMessage(nameof(LoginFoundException), "There is this email.", HandlesCode.ManyRecordsFound));
+                    result.Add(new HandleMessage(nameof(LoginFoundException), "There is this email or login.", HandlesCode.ManyRecordsFound));
                 }
 
                 if (this.GetData(e => e.Email.ToLower().Equals(user.Login.ToLower())).Any())
                 {
-                    result.Add(new HandleMessage(nameof(LoginFoundException), "There is this login.", HandlesCode.ManyRecordsFound));
-                }
-            }
-            else 
-            {
-                /*
-                 * User can't change value to login and email.
-                 */
-                if (!userData.Email.ToLower().Equals(user.Email.ToLower()))
-                {
-                    result.Add(new HandleMessage(nameof(ChangeUserException), "Can't change email.", HandlesCode.ManyRecordsFound));
-                }
-
-                if (!userData.Login.ToLower().Equals(user.Login.ToLower()))
-                {
-                    result.Add(new HandleMessage(nameof(ChangeUserException), "Can't change login.", HandlesCode.ManyRecordsFound));
+                    result.Add(new HandleMessage(nameof(LoginFoundException), "There is this email or login.", HandlesCode.ManyRecordsFound));
                 }
             }
 
