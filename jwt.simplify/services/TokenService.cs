@@ -1,5 +1,6 @@
 ﻿using jwt.simplify.entities;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -27,7 +28,7 @@ namespace JWT.Simplify.services
 
             foreach (var role in user.Roles)
             {
-                tokenDescriptor.Subject.AddClaim(new Claim(ClaimTypes.Role, role.ToString()));
+                tokenDescriptor.Subject.AddClaim(new Claim(ClaimTypes.Role, JsonConvert.SerializeObject(role)));
             }
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
