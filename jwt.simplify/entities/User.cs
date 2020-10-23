@@ -22,5 +22,6 @@ namespace jwt.simplify.entities
         public string HashIdEmail { get; set; }
         [IsRequiredField]
         public List<UserRule> Roles { get; set; }
+        public List<AuthorizedSystem> AuthorizedSystems { get; set; }
     }
 }

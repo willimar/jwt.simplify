@@ -31,6 +31,11 @@ namespace JWT.Simplify.services
                 tokenDescriptor.Subject.AddClaim(new Claim(ClaimTypes.Role, JsonConvert.SerializeObject(role)));
             }
 
+            foreach (var system in user.AuthorizedSystems)
+            {
+                tokenDescriptor.Subject.AddClaim(new Claim(ClaimTypes.System, JsonConvert.SerializeObject(system)));
+            }
+
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
