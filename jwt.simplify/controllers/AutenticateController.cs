@@ -1,8 +1,8 @@
 ﻿using crud.api.core.enums;
 using crud.api.core.interfaces;
-using jwt.simplify.entities;
 using jwt.simplify.services;
-using JWT.Simplify.exceptions;
+using Jwt.Simplify.Core.Entities;
+using Jwt.Simplify.Core.Exceptions;
 using JWT.Simplify.models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +12,6 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
-using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;

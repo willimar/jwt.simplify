@@ -6,7 +6,7 @@ using System.Data;
 using System.Security;
 using System.Text;
 
-namespace jwt.simplify.entities
+namespace Jwt.Simplify.Core.Entities
 {
     public class User: BaseEntity
     {

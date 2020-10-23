@@ -2,13 +2,12 @@
 using crud.api.core.interfaces;
 using crud.api.core.repositories;
 using crud.api.core.services;
-using jwt.simplify.entities;
-using JWT.Simplify.exceptions;
+using Jwt.Simplify.Core.Entities;
+using Jwt.Simplify.Core.Exceptions;
 using JWT.Simplify.services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 
 namespace jwt.simplify.services
 {

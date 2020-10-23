@@ -1,9 +1,6 @@
-﻿using jwt.simplify.entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using crud.api.core.repositories;
+﻿using crud.api.core.repositories;
 using data.provider.core;
+using Jwt.Simplify.Core.Entities;
 
 namespace jwt.simplify.repositories
 {

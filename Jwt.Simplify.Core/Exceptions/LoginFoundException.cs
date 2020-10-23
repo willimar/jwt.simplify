@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace JWT.Simplify.exceptions
+namespace Jwt.Simplify.Core.Exceptions
 {
     public class LoginFoundException: Exception
     {

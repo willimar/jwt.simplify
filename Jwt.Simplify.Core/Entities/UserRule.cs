@@ -1,7 +1,7 @@
 ﻿using crud.api.core.entities;
-using jwt.simplify.enums;
+using Jwt.Simplify.Core.Enums;
 
-namespace jwt.simplify.entities
+namespace Jwt.Simplify.Core.Entities
 {
     public class UserRule : BaseEntity
     {

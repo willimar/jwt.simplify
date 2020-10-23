@@ -1,34 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Version>1.0.2.3</Version>
     <Authors>Rocha, Willimar</Authors>
     <Copyright>Willimar 2020 ©</Copyright>
     <Description>Experimental JSon Web Token to API Autenticate.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/willimar/crud.api</PackageProjectUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReleaseNotes>Prerelease version to use in Autentication API</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="crud.api.core" Version="1.2.2.2" />
-    <PackageReference Include="data.provider.core" Version="1.0.3.1" />
-    <PackageReference Include="EasyCrypt" Version="2.1.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup>    
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Jwt.Simplify.Core\Jwt.Simplify.Core.csproj" />
   </ItemGroup>
 
 </Project>

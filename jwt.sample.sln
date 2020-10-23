@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jwt.sample", "jwt.sample\jw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWT.Simplify", "jwt.simplify\JWT.Simplify.csproj", "{9536FFF9-E40E-48DE-972F-5BA08255559E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jwt.Simplify.Core", "Jwt.Simplify.Core\Jwt.Simplify.Core.csproj", "{E858B227-D2F8-4C18-A31C-EDC533283FD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9536FFF9-E40E-48DE-972F-5BA08255559E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9536FFF9-E40E-48DE-972F-5BA08255559E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9536FFF9-E40E-48DE-972F-5BA08255559E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E858B227-D2F8-4C18-A31C-EDC533283FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E858B227-D2F8-4C18-A31C-EDC533283FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E858B227-D2F8-4C18-A31C-EDC533283FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E858B227-D2F8-4C18-A31C-EDC533283FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

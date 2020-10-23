@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace jwt.simplify.entities
+namespace Jwt.Simplify.Core.Entities
 {
     public class AuthorizedSystem
     {

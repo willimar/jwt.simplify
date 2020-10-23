@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace jwt.simplify.enums
+namespace Jwt.Simplify.Core.Enums
 {
     public enum RulerType
     {

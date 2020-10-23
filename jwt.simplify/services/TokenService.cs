@@ -1,4 +1,4 @@
-﻿using jwt.simplify.entities;
+﻿using Jwt.Simplify.Core.Entities;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System;
