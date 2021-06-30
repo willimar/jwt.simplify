@@ -16,6 +16,15 @@ namespace JWT.Simplify.services
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(TokenService.Secret);
+
+            var securityKey = new SymmetricSecurityKey(key)
+            {
+                CryptoProviderFactory = new CryptoProviderFactory()
+                {
+                    CacheSignatureProviders = false,
+                }
+            };
+
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
@@ -23,7 +32,7 @@ namespace JWT.Simplify.services
                     new Claim(ClaimTypes.Name, user.Login.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddHours(2),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature)
             };
 
             foreach (var role in user.Roles)
